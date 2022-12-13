@@ -10,7 +10,7 @@ namespace GrandPrixRadio.ViewModels.Base
         public ViewModelLocator()
         {
             var serviceCollection = new ServiceCollection();
-            serviceCollection.AddSingleton<MainViewModel>();
+            serviceCollection.AddSingleton<MainPageViewModel>();
             serviceCollection.AddSingleton<PlaylistViewModel>();
             serviceCollection.AddSingleton<CountdownViewModel>();
             serviceCollection.AddSingleton<SyncViewModel>();
@@ -18,7 +18,7 @@ namespace GrandPrixRadio.ViewModels.Base
             serviceProvider = serviceCollection.BuildServiceProvider();
 		}
 
-        public MainViewModel MainViewModel => serviceProvider.GetService<MainViewModel>();
+        public MainPageViewModel MainPageViewModel => serviceProvider.GetService<MainPageViewModel>();
   
         public PlaylistViewModel PlaylistViewModel => serviceProvider.GetService<PlaylistViewModel>();
    

@@ -12,7 +12,7 @@ using Windows.Media.Core;
 namespace GrandPrixRadio.ViewModels;
 
 
-public class MainViewModel : ViewModelBase
+public class MainPageViewModel : ViewModelBase
 {
     private readonly IStorageService storageService;
 
@@ -24,7 +24,7 @@ public class MainViewModel : ViewModelBase
     private string highQualityStreamUri;
     private string lowQualityStreamUri;
 
-    public MainViewModel()
+    public MainPageViewModel()
     {
         storageService = new StorageService();
         HighQualityStreamEnabled = storageService.LoadSetting("highquality", true);         

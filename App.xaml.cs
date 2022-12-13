@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using GrandPrixRadio.Pages;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using System;
 using Windows.Networking.Connectivity;
 using Windows.UI.Popups;
@@ -25,6 +27,11 @@ public partial class App : Application
             }
 
             m_window = new MainWindow();
+
+            Frame rootFrame = new Frame();
+            m_window.Content = rootFrame;
+            rootFrame.Navigate(typeof(MainPage), args.Arguments);
+
             m_window.Activate();
             m_window.Title = "Grand Prix Radio";
 
