@@ -1,18 +1,117 @@
-<!-- Copyright (c) Microsoft Corporation and Contributors. -->
-<!-- Licensed under the MIT License. -->
-
 <Application
     x:Class="GrandPrixRadio.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:GrandPrixRadio">
+    xmlns:locator="using:GrandPrixRadio.ViewModels.Base"
+    RequestedTheme="Light">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                <!-- Other merged dictionaries here -->
-            </ResourceDictionary.MergedDictionaries>
-            <!-- Other app resources here -->
+            <locator:ViewModelLocator x:Key="Locator" />
+            <SolidColorBrush x:Key="ApplicationBackGround" Color="White" />
+            <SolidColorBrush x:Key="GrandPrixRadioBackGround" Color="#1A2849" />
+            <SolidColorBrush x:Key="AppBarButtonForegroundPointerOver" Color="White" />
+            <SolidColorBrush x:Key="GrandPrixRadioBlue" Color="#4596FF" />
+            <SolidColorBrush x:Key="GrandPrixRadioDark" Color="#051937" />
+            <SolidColorBrush x:Key="GrandPrixRadioLight" Color="#EEEEEE" />
+            <SolidColorBrush x:Key="GrandPrixRadioDarkBlue" Color="#FF201B4F" />
+            <SolidColorBrush x:Key="OnAir" Color="White" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day1Background" Color="#FFB30F" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day2Background" Color="#FFB30F" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day3Background" Color="#FFB30F" Opacity="1.0" />
+            <SolidColorBrush x:Key="CircuitInfoBackground" Color="#549F93" Opacity="0.8"/>
+            <SolidColorBrush x:Key="PlayTimeForeground" Color="#FF007F" Opacity="1.0" />
+            <SolidColorBrush x:Key="PlayLabelForeground" Color="#CCCCCC" Opacity="0.9" />
+            <SolidColorBrush x:Key="CountdownNumbers" Color="#FF007F" Opacity="1.0" />
+            <SolidColorBrush x:Key="CurrentSong" Color="#FFFFFF" Opacity="0.9" />
+            <SolidColorBrush x:Key="SyncViewBackground" Color="White" />
+
+
+            <Style x:Key="FooterText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="11" />
+                <Setter Property="Foreground" Value="Black" />
+            </Style>
+
+            <Style x:Key="CountdownNextRaceText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+
+            <Style x:Key="CountdownNextRaceTitleText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+
+            <Style x:Key="CountdownTitleText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+
+            <Style x:Key="CountdownSessionFullTitleText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Opacity" Value="0.6" />
+            </Style>
+
+            <Style x:Key="CountdownSessionNameText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Consolas"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+
+            <Style x:Key="CountdownNumberText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Consolas"/>
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Foreground" Value="{StaticResource CountdownNumbers}" />
+            </Style>
+            <Style x:Key="CountdownText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+
+            <Style x:Key="CurrentOnAirLabel" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="10" />
+                <Setter Property="Foreground" Value="{StaticResource OnAir}" />
+                <Setter Property="Opacity" Value="0.8" />
+            </Style>
+            <Style x:Key="RaceInfoText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Foreground" Value="{StaticResource GrandPrixRadioDarkBlue}" />
+                <Setter Property="Opacity" Value="1.0" />
+            </Style>
+            <Style x:Key="RaceTimeInfoText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Foreground" Value="{StaticResource GrandPrixRadioDarkBlue}" />
+                <Setter Property="Opacity" Value="1.0" />
+            </Style>
+            <Style x:Key="DateInfoText" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Oswald"/>
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Foreground" Value="{StaticResource GrandPrixRadioDarkBlue}" />
+                <Setter Property="Opacity" Value="1.0" />
+            </Style>
+
+            <Style x:Key="SyncOffset" TargetType="TextBlock">
+                <Setter Property="FontFamily" Value="Consolas"/>
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontWeight" Value="Normal" />
+                <Setter Property="Foreground" Value="Black" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
