@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GrandPrixRadio (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "GrandPrixRadio (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
