@@ -4,7 +4,8 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap rescap">
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  IgnorableNamespaces="uap rescap uap3">
 
   <Identity
     Name="3d7a4a83-3644-49a7-83b5-a5edc404a6a4"
@@ -44,5 +45,7 @@
 
   <Capabilities>
     <rescap:Capability Name="runFullTrust" />
+    <uap3:Capability Name="backgroundMediaPlayback"/>
+    <Capability Name="internetClient"/>
   </Capabilities>
 </Package>

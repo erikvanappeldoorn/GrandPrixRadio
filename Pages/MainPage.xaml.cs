@@ -1,5 +1,6 @@
+using GrandPrixRadio.ViewModels;
 using GrandPrixRadio.Views.Base;
-using PubSub;
+using Hub = PubSub.Hub;
 
 namespace GrandPrixRadio.Pages
 {
@@ -8,9 +9,7 @@ namespace GrandPrixRadio.Pages
         public MainPage()
         {
             this.InitializeComponent();
-
             Hub.Default.Subscribe<LabelChangedEvent>(_ => CurrentPlayItemLabelIn.Begin());
-
         }
     }
 }

@@ -3,6 +3,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:base="using:GrandPrixRadio.Views.Base"
+    xmlns:views="using:GrandPrixRadio.Views"
     xmlns:converter="using:GrandPrixRadio.Converters"
     DataContext="{Binding MainPageViewModel, Source={StaticResource Locator}}">
     <base:PageBase.Resources>
@@ -50,6 +51,16 @@
                     <ScaleTransform ScaleX="1" ScaleY="1" CenterX="200" CenterY="50"/>
                 </Image.RenderTransform>
             </Image>
+
+            <views:PlaylistView HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+            <MediaPlayerElement 
+                 x:Name="StreamRadioMedia"  
+                 AreTransportControlsEnabled="False"
+                 Source="{Binding RadioStreamMediaSource}" 
+                 AutoPlay="True">
+            </MediaPlayerElement>
         </StackPanel>
+        <views:CountdownView Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
     </Grid>
 </base:PageBase>
