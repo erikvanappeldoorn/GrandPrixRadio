@@ -62,5 +62,24 @@
             </MediaPlayerElement>
         </StackPanel>
         <views:CountdownView Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+        <views:SyncView Grid.Row="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <TextBlock Text="All times based on Central European Time (CET)" FontSize="8" HorizontalAlignment="Right" Margin="0,5,10,5"  Foreground="Gray" />
+            <TextBlock Text="{Binding Version}" FontSize="8" HorizontalAlignment="Right" Margin="0,5,10,5"  Foreground="Gray" />
+        </StackPanel>
     </Grid>
+    <base:PageBase.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True" Background="White">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton Command="{Binding Reconnect}" Icon="Sync" Label="Reconnect" />
+                <AppBarButton Name="MuteToggle" 
+                              Margin="160,0,0,0"
+                              Icon="{Binding Muted, Converter={StaticResource ResourceKey=MutedToIconConverter}}" 
+                              Command="{Binding MuteToggle}"  />
+
+                <ToggleSwitch IsOn="{Binding HighQualityStreamEnabled, Mode=TwoWay}" Margin="5,0,0,15" OnContent="main stream" OffContent="backup stream" />
+            </StackPanel>
+        </AppBar>
+    </base:PageBase.BottomAppBar>
 </base:PageBase>

@@ -15,6 +15,7 @@
     <None Remove="Pages\MainPage.xaml" />
     <None Remove="Views\CountdownView.xaml" />
     <None Remove="Views\PlaylistView.xaml" />
+    <None Remove="Views\SyncView.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -51,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Banner\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\SyncView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\CountdownView.xaml">

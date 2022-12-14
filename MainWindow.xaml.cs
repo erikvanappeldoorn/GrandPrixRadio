@@ -17,6 +17,6 @@ public sealed partial class MainWindow : Window
         var windowId = Win32Interop.GetWindowIdFromWindow(hWnd);
         var appWindow = AppWindow.GetFromWindowId(windowId);
 
-        appWindow.Resize(new SizeInt32 { Width = 500, Height = 640 });
+        appWindow.Resize(new SizeInt32 { Width = 1280, Height = 1600 });
     }
 }

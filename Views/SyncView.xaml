@@ -1,0 +1,21 @@
+<UserControl
+    x:Class="GrandPrixRadio.Views.SyncView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="using:GrandPrixRadio.Converters"
+    DataContext="{Binding SyncViewModel, Source={StaticResource Locator}}">
+    <UserControl.Resources>
+        <converter:SyncOffsetConverter x:Key="SyncOffsetConverter" />
+    </UserControl.Resources>
+
+    <Border Background="{StaticResource SyncViewBackground}" Margin="10,0,10,0" CornerRadius="0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <AppBarButton Name="Back5Sec" Icon="Previous" Label="-5 sec."  Command="{Binding BackFiveSeconds}" />
+            <AppBarButton Name="Back1Sec" Icon="Previous" Label="-1 sec."  Command="{Binding BackOneSecond}" />
+
+            <TextBlock Name="Offset" Text="{Binding Offset, Converter={StaticResource SyncOffsetConverter}}" Margin="70,15,0,0" Style="{StaticResource SyncOffset}" />
+            <AppBarButton Name="Forward1Sec" Icon="Next" Label="+1 sec."  Command="{Binding ForwardOneSecond}" Margin="40,0,0,0" />
+            <AppBarButton Name="Forward5Sec" Icon="Next" Label="+5 sec."  Command="{Binding ForwardFiveSeconds}" />
+        </StackPanel>
+    </Border>
+</UserControl>
