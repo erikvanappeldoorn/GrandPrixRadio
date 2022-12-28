@@ -53,6 +53,11 @@
     <Folder Include="Assets\Banner\" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="gpr.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\SyncView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
