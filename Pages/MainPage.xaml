@@ -53,10 +53,9 @@
             </Image>
 
             <views:PlaylistView HorizontalAlignment="Stretch" Margin="0,0,0,0" />
-
+            
             <MediaPlayerElement 
                  x:Name="StreamRadioMedia"  
-                 AreTransportControlsEnabled="False"
                  Source="{Binding RadioStreamMediaSource}" 
                  AutoPlay="True">
             </MediaPlayerElement>
