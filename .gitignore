@@ -2,3 +2,4 @@ AppPackages/
 bin/
 obj/
 .vs/
+*.pfx
