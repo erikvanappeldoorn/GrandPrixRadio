@@ -15,13 +15,13 @@
             <SolidColorBrush x:Key="GrandPrixRadioLight" Color="#EEEEEE" />
             <SolidColorBrush x:Key="GrandPrixRadioDarkBlue" Color="#FF201B4F" />
             <SolidColorBrush x:Key="OnAir" Color="White" Opacity="1.0" />
-            <SolidColorBrush x:Key="Day1Background" Color="#FFB30F" Opacity="1.0" />
-            <SolidColorBrush x:Key="Day2Background" Color="#FFB30F" Opacity="1.0" />
-            <SolidColorBrush x:Key="Day3Background" Color="#FFB30F" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day1Background" Color="#d1c847" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day2Background" Color="#d1c847" Opacity="1.0" />
+            <SolidColorBrush x:Key="Day3Background" Color="#d1c847" Opacity="1.0" />
             <SolidColorBrush x:Key="CircuitInfoBackground" Color="#549F93" Opacity="0.8"/>
             <SolidColorBrush x:Key="PlayTimeForeground" Color="#FF007F" Opacity="1.0" />
             <SolidColorBrush x:Key="PlayLabelForeground" Color="#CCCCCC" Opacity="0.9" />
-            <SolidColorBrush x:Key="CountdownNumbers" Color="#FF007F" Opacity="1.0" />
+            <SolidColorBrush x:Key="CountdownNumbers" Color="#FFD700" Opacity="1.0" />
             <SolidColorBrush x:Key="CurrentSong" Color="#FFFFFF" Opacity="0.9" />
             <SolidColorBrush x:Key="SyncViewBackground" Color="White" />
 

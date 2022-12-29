@@ -18,7 +18,7 @@ internal class SessionDayToOpacityConverter : IValueConverter
             return 1.0;
         }
 
-        return 0.6;
+        return 0.5;
     }
 
     public object ConvertBack(object value, Type targetType, object parameter, string language)
