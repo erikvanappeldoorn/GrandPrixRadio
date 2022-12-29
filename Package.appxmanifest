@@ -5,16 +5,17 @@
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap rescap uap3">
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  IgnorableNamespaces="uap rescap uap3 mp">
 
   <Identity
-    Name="3d7a4a83-3644-49a7-83b5-a5edc404a6a4"
-    Publisher="CN=erikvanappeldoorn"
-    Version="1.0.0.0" />
+    Name="25341ErikvanAppeldoorn.5048665C671DA"
+    Publisher="CN=13FBBEF3-2DCA-4099-ADAC-7FAACC2D8682"
+    Version="3.0.0.0" />
 
   <Properties>
-    <DisplayName>GrandPrixRadio</DisplayName>
-    <PublisherDisplayName>erikvanappeldoorn</PublisherDisplayName>
+    <DisplayName>Grand Prix Radio</DisplayName>
+    <PublisherDisplayName>Erik van Appeldoorn</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,7 +33,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="GrandPrixRadio"
+        DisplayName="Grand Prix Radio"
         Description="GrandPrixRadio"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
