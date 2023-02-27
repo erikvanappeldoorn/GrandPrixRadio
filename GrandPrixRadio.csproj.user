@@ -11,7 +11,7 @@
     <PackageLogoSource>C:\Temp\GPR.png</PackageLogoSource>
     <AppxShowAllApps>True</AppxShowAllApps>
     <UapAppxPackageBuildMode>StoreAndSideload</UapAppxPackageBuildMode>
-    <AppxBuildConfigurationSelection>x86|x64</AppxBuildConfigurationSelection>
+    <AppxBuildConfigurationSelection>x86|x64|arm64</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <ItemGroup>
